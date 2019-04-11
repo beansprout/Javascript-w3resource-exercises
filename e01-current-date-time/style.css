@@ -1,0 +1,12 @@
+body {
+  background-image: url('https://cdn.pixabay.com/photo/2018/10/12/21/09/meadow-3743023_1280.jpg');
+  color: #ffffff;
+  text-align: center;
+  padding: 100px;
+  -webkit-background-size: cover;
+  -moz-background-size: cover;
+  -o-background-size: cover;
+  background-size: cover;
+}
+
+
