@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>What's the Date</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <h1>What's the Date?</h1>
+  <button type = "button" onclick = "document.getElementById('date').innerHTML = displayDate()">
+    Click me</button>
+  <p id = "date"></p>
+  <img src="https://media.gettyimages.com/photos/dates-picture-id181077887" alt="date" class="responsive">
+
+  <script>
+  //Write a JavaScript program to get the current date
+  //Expected Output : mm-dd-yyyy, mm/dd/yyyy or dd-mm-yyyy, dd/mm/yyyy
+  const displayDate = () => {
+    const today = new Date();
+    let month = today.getMonth()+1;
+    let day = today.getDate();
+    let year = today.getFullYear();
+    // format date
+    if (month < 10) month = '0' + month;
+    if (day < 10) day = '0' + day;
+    return (month + "/" + day + "/" + year );
+  }
+  </script>
+</body>
+</html>
