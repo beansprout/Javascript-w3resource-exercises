@@ -12,7 +12,7 @@ const display = () => {
 
   const DAYS = ['Sunday', 'Monday', 'Tuesday', 'Wednesday', 'Thursday', 'Friday', 'Saturday'];
 
-  const hours = () => {
+  const _hours = () => {
     if (today.getHours() === 0) {
       return ('12 AM');
     }
@@ -22,11 +22,18 @@ const display = () => {
     return (today.getHours() + (' AM'))
   }
 
-  const min = today.getMinutes();
-  const sec = today.getSeconds();
+  const _min = () => {
+    const min = today.getMinutes();
+    return min.toString().length === 1 ? '0' + min : min;
+  }
+
+  const _sec = () => {
+    const sec = today.getSeconds();
+    return sec.toString().length === 1 ? '0' + sec: sec;
+  }
 
   date.innerHTML = `Today is : ${DAYS[today.getDay()]}.`;
-  time.innerHTML = `Current time is : ${hours()} : ${min} : ${sec}`;
+  time.innerHTML = `Current time is : ${_hours()} : ${_min()} : ${_sec()}`;
   return
 }
 
